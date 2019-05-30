@@ -1,0 +1,23 @@
+$border:1px solid black;
+.search-wrap{
+    display: flex;
+    .input-box{
+        font-size: 2rem;
+        width: 75%;
+        border-bottom: $border;
+        border-left:$border;
+        border-top: $border;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .input-button{
+        width: 25%;
+        font-size: 2rem;
+        border-bottom: $border;
+        border-right:$border;
+        border-top: $border;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+}
+

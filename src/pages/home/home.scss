@@ -1,0 +1,12 @@
+.hot{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &-each{
+        width: 30%;
+        height: 20vw;
+        background: sandybrown;
+        margin-top: 10vw;
+    }
+}
