@@ -2,6 +2,9 @@ import React from "react"
 import Search from "../../components/Search/Search"
 import { connect } from "react-redux"
 import "./home.scss"
+import jsonp from "fetch-jsonp"
+import axios from "axios"
+import "../../setupProxy"
 class Home extends React.Component {
     render() {
         return (
@@ -19,7 +22,29 @@ class Home extends React.Component {
 
         )
     }
+    componentDidMount(){
+        getHot()
+    }
 }
+
+
+
+const getHot=()=>{
+    axios.get('/hot')
+    .then((res) => {
+         console.log(res.data.list);
+    })
+
+    
+    // jsonp(api).then(res => {
+    //     return res.json();//这是一个promise
+    // }).then(res => {
+    //     console.log(res);//向后台请求的数据
+    // })
+
+}
+
+
 const mapStateToProps = (state) => {
     return {
         value: state.value
