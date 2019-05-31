@@ -2,47 +2,59 @@ import React from "react"
 import Search from "../../components/Search/Search"
 import { connect } from "react-redux"
 import "./home.scss"
-import jsonp from "fetch-jsonp"
 import axios from "axios"
 import "../../setupProxy"
 class Home extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            novels: []
+        };
+    }
     render() {
         return (
             <div>
                 <Search></Search>
                 <div className="hot">
-                    <div className="hot-each">1</div>
-                    <div className="hot-each">2</div>
-                    <div className="hot-each">3</div>
-                    <div className="hot-each">4</div>
-                    <div className="hot-each">5</div>
-                    <div className="hot-each">6</div>
+                    {
+                        this.state.novels.map((el, index) => {        
+                            return (
+                                <div className="hot-each" key={index}>
+                                    <img className="cover" src={`https://statics.zhuishushenqi.com${el.cover}`} alt="" />
+                                </div>
+                            )
+                        })
+                    }
+
                 </div>
             </div>
-
         )
     }
-    componentDidMount(){
-        getHot()
+    componentDidMount() {
+        this.getHot()
+    }
+    getHot = () => {
+        axios.get('/hot')
+            .then((res) => {
+                console.log(res.data.ranking);
+                const imgs=[]
+                res.data.ranking.books.map((el,index)=>{
+                    if(index<9){
+                        imgs.push(el)
+                    }else{
+                        return null
+                    }
+                })
+                this.setState({
+                    novels: imgs
+                })
+            })
     }
 }
 
 
 
-const getHot=()=>{
-    axios.get('/hot')
-    .then((res) => {
-         console.log(res.data.list);
-    })
 
-    
-    // jsonp(api).then(res => {
-    //     return res.json();//这是一个promise
-    // }).then(res => {
-    //     console.log(res);//向后台请求的数据
-    // })
-
-}
 
 
 const mapStateToProps = (state) => {

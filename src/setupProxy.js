@@ -5,8 +5,11 @@ module.exports = function (app) {
       proxy(
           '/hot',
           {
-            target: 'http://api.zhuishushenqi.com/ranking/54d43437d47d13ff21cad58b',
-            changeOrigin: true
+            target: 'http://api.zhuishushenqi.com/ranking/5a322ef4fc84c2b8efaa8335',
+            changeOrigin: true,
+            pathRewrite:{
+                "^/hot" : "/"
+            }
           }
       )
   );

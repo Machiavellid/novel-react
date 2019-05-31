@@ -4,9 +4,12 @@
     flex-wrap: wrap;
 
     &-each{
-        width: 30%;
-        height: 20vw;
-        background: sandybrown;
-        margin-top: 10vw;
+        width: 31.5%;
+        margin: 1vw 0;
+        .cover{
+            border-radius: 10px;
+            width: 100%;
+            height: 40vw;
+        }
     }
 }
