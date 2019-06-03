@@ -5,7 +5,7 @@ module.exports = function (app) {
       proxy(
           '/hot',
           {
-            target: 'http://api.zhuishushenqi.com/ranking/5a322ef4fc84c2b8efaa8335',
+            target: 'http://api.zhuishushenqi.com/ranking/5a39d435fc84c2b8ef884798',
             changeOrigin: true,
             pathRewrite:{
                 "^/hot" : "/"

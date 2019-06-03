@@ -1,5 +1,5 @@
 const defautValue={
-    value:1
+    value:"detai;"
 }
 
 export default (state=defautValue,action)=>{
