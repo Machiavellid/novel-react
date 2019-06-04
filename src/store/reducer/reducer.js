@@ -1,8 +1,13 @@
 import {combineReducers} from "redux"
-import homeReducer from "../reducer/home"
+import homeHotReducer from "./homeHot"
+import homeVipReducer from "./homeVip"
+import homeNewReducer from "./homeNew"
 import detailReduce from "../reducer/detail"
 
+
 export default combineReducers({
-    home:homeReducer,
-    detail:detailReduce
+    homeHot:homeHotReducer,
+    detail:detailReduce,
+    homeVip:homeVipReducer,
+    homeNew:homeNewReducer
 })
