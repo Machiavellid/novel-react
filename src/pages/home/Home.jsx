@@ -1,10 +1,12 @@
 import React from "react"
-import Search from "../../components/Search/Search"
+// import Search from "../../components/Search/Search"
 import { connect } from "react-redux"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./home.scss"
 import "../../setupProxy"
 import * as action from "../../store/action/actionType"
+import searchImg from "../../imgs/sou-suo.png"
+import classImg from "../../imgs/class.png"
 class Home extends React.Component {
     // constructor(props) {
     //     super(props);
@@ -12,7 +14,19 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <Search></Search>
+                <div className="header">
+                    <div className="search">
+                        <img className="search-img" src={searchImg} alt="" />
+                        <input className="search-input" type="text" name="" id="" placeholder="请输入书名" />
+                    </div>
+                    <div className="cata">
+                        <img className="cata-img" src={classImg} alt="" />
+                        <Link to="/cata">
+                            <span className="cata-text">分类</span>
+                        </Link>
+
+                    </div>
+                </div>
                 <div className="hot">
                     <div className="cata-colume">
                         <span className="cata-title">畅销精选</span>
@@ -29,23 +43,23 @@ class Home extends React.Component {
                         </div>
                     </div>
 
-                    <div className="hot-rest pdt2">                    
-                    {
-                        this.props.value.books.map((el, index) => {
-                            if (index > 0 & index < 5) {
-                                return (
-                                    <div className="hot-rest-each" key={el._id}>
-                                        <img className="cover" src={`https://statics.zhuishushenqi.com${el.cover}`} alt="" />
-                                        <span className="novel-title ellipsis pdt1">{el.title}</span>
-                                    </div>
-                                )
-                            }
-                            else {
-                                return null;
-                            }
+                    <div className="hot-rest pdt2">
+                        {
+                            this.props.value.books.map((el, index) => {
+                                if (index > 0 & index < 5) {
+                                    return (
+                                        <div className="hot-rest-each" key={el._id}>
+                                            <img className="cover" src={`https://statics.zhuishushenqi.com${el.cover}`} alt="" />
+                                            <span className="novel-title ellipsis pdt1">{el.title}</span>
+                                        </div>
+                                    )
+                                }
+                                else {
+                                    return null;
+                                }
 
-                        })
-                    }
+                            })
+                        }
                     </div>
 
                 </div>
@@ -66,23 +80,23 @@ class Home extends React.Component {
                         </div>
                     </div>
 
-                    <div className="hot-rest pdt2">                    
-                    {
-                        this.props.Vip.books.map((el, index) => {
-                            if (index > 0 & index < 5) {
-                                return (
-                                    <div className="hot-rest-each" key={el._id}>
-                                        <img className="cover" src={`https://statics.zhuishushenqi.com${el.cover}`} alt="" />
-                                        <span className="novel-title ellipsis pdt1">{el.title}</span>
-                                    </div>
-                                )
-                            }
-                            else {
-                                return null;
-                            }
+                    <div className="hot-rest pdt2">
+                        {
+                            this.props.Vip.books.map((el, index) => {
+                                if (index > 0 & index < 5) {
+                                    return (
+                                        <div className="hot-rest-each" key={el._id}>
+                                            <img className="cover" src={`https://statics.zhuishushenqi.com${el.cover}`} alt="" />
+                                            <span className="novel-title ellipsis pdt1">{el.title}</span>
+                                        </div>
+                                    )
+                                }
+                                else {
+                                    return null;
+                                }
 
-                        })
-                    }
+                            })
+                        }
                     </div>
 
                 </div>
@@ -103,23 +117,23 @@ class Home extends React.Component {
                         </div>
                     </div>
 
-                    <div className="hot-rest pdt2">                    
-                    {
-                        this.props.New.books.map((el, index) => {
-                            if (index > 0 & index < 5) {
-                                return (
-                                    <div className="hot-rest-each" key={el._id}>
-                                        <img className="cover" src={`https://statics.zhuishushenqi.com${el.cover}`} alt="" />
-                                        <span className="novel-title ellipsis pdt1">{el.title}</span>
-                                    </div>
-                                )
-                            }
-                            else {
-                                return null;
-                            }
+                    <div className="hot-rest pdt2">
+                        {
+                            this.props.New.books.map((el, index) => {
+                                if (index > 0 & index < 5) {
+                                    return (
+                                        <div className="hot-rest-each" key={el._id}>
+                                            <img className="cover" src={`https://statics.zhuishushenqi.com${el.cover}`} alt="" />
+                                            <span className="novel-title ellipsis pdt1">{el.title}</span>
+                                        </div>
+                                    )
+                                }
+                                else {
+                                    return null;
+                                }
 
-                        })
-                    }
+                            })
+                        }
                     </div>
 
                 </div>

@@ -38,4 +38,16 @@ module.exports = function (app) {
         }
     )
   )
+  app.use(
+    proxy(
+      "/cata",
+      {
+        target:"http://api.zhuishushenqi.com/cats/lv2/statistics",
+        changeOrigin:true,
+        pathRewrite:{
+          "^/cata":"/"
+        }
+      }
+    )
+  )
 };

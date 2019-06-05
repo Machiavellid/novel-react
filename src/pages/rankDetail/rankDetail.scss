@@ -1,19 +1,35 @@
 .rank{
+    position: relative;
     &-title{
+        width: 100%;
+        background: white;
+        position: fixed;
+        padding-bottom: 1rem;
+        &-wrap{
+            width: 90%;
+            padding-top: 1rem;
+            margin: 0 auto;
+            font-size: 2rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .return{
+                width: 6%;
+                position: absolute;
+                left: 0;
+            }  
+              
+        }
+    }
+    
+    .novels{
         width: 90%;
-        padding-top: 1rem;
         margin: 0 auto;
-        font-size: 2rem;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .return{
-            width: 6%;
-            position: absolute;
-            left: 0;
-        }  
-          
+        padding-top: 3rem;
+        .hot-each{
+            border-bottom: solid 1px slategrey;
+        }
     }
 
 }

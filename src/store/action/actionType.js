@@ -34,3 +34,15 @@ export const homeNewInit = () => {
             })
     }
 }
+
+export const cataInit = () => {
+    return (dispatch) => {
+        axios.get("/cata")
+            .then((res) => {
+                dispatch({
+                    type: "Init_Cata",
+                    value: res.data
+                })
+            })
+    }
+}

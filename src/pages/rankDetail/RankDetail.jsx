@@ -9,8 +9,8 @@ class RankDetail extends React.Component {
         this.state = {
             cata: "畅销精选",
             returnimg: returnimg,
-            novels:{
-
+            novels: {
+                books: []
             }
         }
     }
@@ -18,13 +18,25 @@ class RankDetail extends React.Component {
         return (
             <div className="rank">
                 <div className="rank-title">
-                    <img className="return" src={returnimg} alt="" onClick={()=>{this.props.history.goBack()}}/>
-                    <span className="rank-text" style={{ clear: "both" }}></span><span>{this.state.cata}</span>
+                    <div className="rank-title-wrap">
+                        <img className="return" src={returnimg} alt="" onClick={() => { this.props.history.goBack() }} />
+                        <span>{this.state.cata}</span>
+                    </div>
+
                 </div>
                 <div className="novels">
                     {
-                        this.state.novels.map((el)=>{
-                            
+                        this.state.novels.books.map((el) => {
+                            return (
+                                <div className="hot-each" key={el._id}>
+                                    <img className="cover" src={`https://statics.zhuishushenqi.com${el.cover}`} alt="" />
+                                    <div className="novel-text">
+                                        <span className="novel-title ellipsis ">{el.title}</span>
+                                        <span className="novel-summary two-ellipsis">简介:{el.shortIntro}</span>
+                                        <span className="novel-author ellipsis "><span>{el.author}</span><span className="novel-cata">{el.majorCate}{el.minorCate === "" ? null : ` ${el.minorCate}`}</span></span>
+                                    </div>
+                                </div>
+                            )
                         })
                     }
                 </div>
@@ -39,19 +51,19 @@ class RankDetail extends React.Component {
             case "new":
                 this.setState({
                     cata: "最新热书",
-                    novels:this.props.New
+                    novels: this.props.New
                 })
                 break
             case "Vip":
                 this.setState({
                     cata: "VIP专属",
-                    novels:this.props.Vip
+                    novels: this.props.Vip
                 })
                 break
             default:
                 this.setState({
                     cata: "畅销精选",
-                    novels:this.props.value
+                    novels: this.props.value
                 })
         }
     }

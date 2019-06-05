@@ -1,0 +1,83 @@
+.cata{
+    width: 95%;
+    margin: 0 auto;
+    .header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        &-img{
+            width: 5%;
+        }
+        &-text{
+            padding-left: 2rem;
+            font-size: 2rem;
+            color: red;
+        }
+
+    }
+    &-content{
+        display: flex;
+        justify-content: space-between;
+        .cata-text{
+            width: 15%;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-each{
+                padding: 2rem .5rem;
+                border-bottom: 1px solid slategrey;
+            }
+        }
+        .cata-detail-wrap{
+            width: 85%;
+            .hidden{
+                display: none;
+            }
+            .cata-detail{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                &-each{
+                    padding: .5rem 0;
+                    margin-bottom: 1rem;
+                    width: 48.5%;
+                    background: ghostwhite;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    .detail-text{
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        .cata-name{
+                            font-size: 1.3rem;
+                        }
+                        .cata-count{
+                            font-size: 1.1rem;
+                            padding-top: .5rem;
+                            color: slategrey;
+                        }
+                    }
+                    .detail-img{
+                        width: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &-each{
+                            width: 50%;
+                            height: 12vw;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

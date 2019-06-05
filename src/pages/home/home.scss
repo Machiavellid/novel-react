@@ -4,7 +4,43 @@
     background: whitesmoke;
     margin: 5vw 0;
 }
-
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 1rem auto;
+    .search{
+        width: 80%;
+        padding: .5rem;
+        background: lavender;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        &-img{
+            width: 5%;    
+        }
+        &-input{
+            width: 90%;
+            background: lavender;
+            border: 0;
+            font-size: 1.2rem;
+        }
+    }
+    .cata{
+        width: 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-img{
+            width: 40%;
+        }
+        &-text{
+            font-size: 1.5rem;
+        }
+    }
+}
 .hot{
     display: flex;
     justify-content: space-between;
@@ -33,7 +69,6 @@
     &-each{
         width: 100%;
         padding: 3vw 0;
-        border-bottom: solid 1px lightgray;
         display: flex;
         justify-content: space-between;
         .cover{
