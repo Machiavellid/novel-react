@@ -1,0 +1,94 @@
+.hot{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    .cata-colume{
+        padding: 1rem 0;
+        border-bottom: solid 1px slategrey;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .cata-title{
+            font-size: 2.5rem;
+            font-family: serif;
+            font-weight: bold;
+        }
+        .cata-button{
+            font-size: 1.5rem;
+            color: slategrey;
+            display: flex;
+            align-items: center;
+        }
+    }
+   
+    &-each{
+        width: 100%;
+        padding: 3vw 0;
+        display: flex;
+        justify-content: space-between;
+        .cover{
+            border: solid 1px lightgrey;
+            border-radius: 10px;
+            width: 20%;
+            height: 25vw;
+        }
+        .novel-text{
+            justify-content: space-between;
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            .novel-title{
+                font-size: 1.8rem;
+            }
+            .novel-author{
+                font-size: 1.2rem;
+                color: slategray;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .novel-cata{
+                    color: cornsilk;
+                    font-size: 1rem;
+                    padding: .3rem .6rem;
+                    background: silver;
+                    border-radius: 15px
+                }
+            }
+            .novel-cata{
+                font-size: 1.5rem;
+            }
+            .novel-summary{
+                font-size: 1.3rem;
+                line-height: 1.7rem;
+            }
+            
+            .two-ellipsis{
+                -webkit-line-clamp:2; 
+                display: -webkit-box; 
+                /*! autoprefixer: off */
+                -webkit-box-orient: vertical; 
+                /* autoprefixer: on */
+                overflow:hidden; 
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    &-rest{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &-each{
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            .cover{
+                width: 100%;
+                height: 25vw;
+                border: solid 1px lightgrey;
+                border-radius: 10px;
+            }
+        }
+    }
+}

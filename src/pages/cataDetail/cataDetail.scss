@@ -1,5 +1,5 @@
 .cata{
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     .header{
         width: 100%;
@@ -25,6 +25,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            >.chosen{
+                color: red;
+                font-weight: bold;
+            }
             &-each{
                 padding: 2rem .5rem;
                 border-bottom: 1px solid slategrey;
@@ -32,50 +36,61 @@
         }
         .cata-detail-wrap{
             width: 85%;
-            .hidden{
+            >.hidden{
                 display: none;
             }
-            .cata-detail{
+            >.cata-detail{
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 flex-wrap: wrap;
-                &-each{
-                    padding: .5rem 0;
-                    margin-bottom: 1rem;
+                >.detail-link{
+                    color: #7e8c8d;
                     width: 48.5%;
-                    background: ghostwhite;
                     display: flex;
-                    align-items: center;
                     justify-content: space-between;
-                    
-                    .detail-text{
-                        width: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        .cata-name{
-                            font-size: 1.3rem;
-                        }
-                        .cata-count{
-                            font-size: 1.1rem;
-                            padding-top: .5rem;
-                            color: slategrey;
-                        }
-                    }
-                    .detail-img{
-                        width: 50%;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    text-decoration: none;
+                    .cata-detail-each{
+                        border-radius: 10px;
+                        padding: .5rem 0;
+                        margin-bottom: 1rem;
+                        width: 100%;
+                        background: ghostwhite;
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-                        &-each{
+                        justify-content: space-between;
+                        
+                        .detail-text{
                             width: 50%;
-                            height: 12vw;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            .cata-name{
+                                font-size: 1.3rem;
+                            }
+                            .cata-count{
+                                font-size: 1.1rem;
+                                padding-top: .5rem;
+                                color: slategrey;
+                            }
+                        }
+                        .detail-img{
+                            width: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            &-each{
+                                width: 50%;
+                                height: 12vw;
+                            }
                         }
                     }
-                }
+                }               
+                
             }
         }
         

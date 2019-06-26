@@ -1,0 +1,65 @@
+.CataNovels{
+    position: relative;
+    >.title{
+        width: 100%;
+        background: white;
+        position: fixed;
+        padding-bottom: 1rem;
+        >.title-wrap{
+            width: 90%;
+            padding-top: 1rem;
+            margin: 0 auto;
+            font-size: 2rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >.return{
+                width: 6%;
+                position: absolute;
+                left: 0;
+            }  
+              
+        }
+    }
+    .second-cata{
+        padding-top: 4rem;
+        font-size: 1.5rem;
+        width: 90%;
+        margin: 0 auto;
+        &-title{
+            padding: 1rem 0;
+        }
+        &-wrap{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            .second-cata-each{
+                font-size: 1.4rem;
+                display: block;
+                background: lightgray;
+                border-radius: 20px;
+                padding: 0.4rem;
+                width: 25%;
+                margin-right: 1rem;
+                text-align: center;
+                margin: .5rem 0;
+            }
+            .chosen{
+                background: lightsteelblue;
+                color: red;
+            }
+        }
+
+    }
+    .novels{
+        width: 90%;
+        margin: 0 auto;
+        // padding-top: 3rem;
+        .hot-each{
+            border-bottom: solid 1px slategrey;
+        }
+    }
+
+}

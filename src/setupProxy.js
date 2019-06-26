@@ -50,4 +50,16 @@ module.exports = function (app) {
       }
     )
   )
+  app.use(
+    proxy(
+      "/zhuishushenqi",
+      {
+        target:"http://api.zhuishushenqi.com",
+        changeOrigin:true,
+        pathRewrite:{
+          "^/zhuishushenqi":"/"
+        }
+      }
+    )
+  )
 };

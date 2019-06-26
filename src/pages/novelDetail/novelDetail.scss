@@ -1,0 +1,144 @@
+.novelDetail{
+    position: relative;
+    >.title{
+        width: 100%;
+        background: white;
+        position: fixed;
+        padding-bottom: 1rem;
+        >.title-wrap{
+            width: 90%;
+            padding-top: 1rem;
+            margin: 0 auto;
+            font-size: 2rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            >.return{
+                width: 6%;
+                left: 0;
+            }
+        }
+    }
+    >.novel-wrap{
+        padding-top: 4.5rem;
+        width: 90%;
+        margin: 0 auto;
+        >.info{
+            display: flex;
+            justify-content: space-between;
+            >.cover{
+                width: 25vw;
+                height: 35vw;
+                border: 1px solid lightslategray;
+                border-radius: 10px;
+            }
+            >.detail{
+                width: 65%;
+                >.title{
+                    padding: .7rem 0;
+                    font-size: 2rem;
+                }
+                >.author{
+                    color: slategrey;
+                    font-size: 1.5rem;
+                    padding: .7rem 0;
+                    >.author-text{
+                        color: red
+                    }
+                    >.padding-symbol{
+                        padding:0 .5rem;
+                    }
+                }
+                >.word-count{
+                    color: slategrey;
+                    font-size: 1.5rem;
+                    padding: .7rem 0;
+                    >.padding-symbol{
+                        padding:0 .5rem;
+                    }
+                }
+            >.update{
+                color: slategrey;
+                font-size: 1.5rem;
+                padding: .7rem 0;
+            }
+            >.tags{
+                display: flex;
+                color: slategrey;
+                font-size: 1.5rem;
+                padding: .7rem 0;
+                >.tags-title{
+                    width: 30%;
+                }
+                >.tags-wrap{
+                    display: flex;
+                    justify-content: baseline;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    >.tags-each{
+                        display: block;
+                        font-size: 1rem;
+                        border-radius: 15px;
+                        padding: .3rem;
+                        border: 1px solid #F5F5F5;
+                        margin: 0 1rem .4rem 0;
+                        background: #F5F5F5;
+                    }
+                }  
+            }
+
+            }
+        }
+        >.novel-data{
+            color: darkslategrey;
+            display: flex;
+            >div{
+                width: 33.3%
+            }
+            >.rating-wrap{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                >.rating-score{
+                   font-size: 2rem 
+                }
+                >.rating-count{
+                    padding: 1rem 0;
+                }
+            }
+            >.retentionRatio-wrap{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                >.retentionRatio-score{
+                    font-size: 2rem 
+                 }
+                 >.retentionRatio-text{
+                     padding: 1rem 0;
+                 }
+            }
+            >.follower-wrap{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                >.follower-count{
+                    font-size: 2rem 
+                 }
+                 >.follower-text{
+                     padding: 1rem 0;
+                 }
+            }
+        }
+        >.novel-intro{
+            >.intro-title{
+                font-size: 1.5rem;
+                padding: 1rem 0;
+            }
+            >.intro-text{
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+                color: darkslategrey;
+            }
+        }
+    }
+}

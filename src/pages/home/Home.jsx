@@ -7,6 +7,8 @@ import "../../setupProxy"
 import * as action from "../../store/action/actionType"
 import searchImg from "../../imgs/sou-suo.png"
 import classImg from "../../imgs/class.png"
+
+
 class Home extends React.Component {
     // constructor(props) {
     //     super(props);
@@ -29,11 +31,9 @@ class Home extends React.Component {
                 </div>
                 <div className="hot">
                     <div className="cata-colume">
-                        <span className="cata-title">畅销精选</span>
+                         <Link to="/novels"><span className="cata-title">畅销精选</span></Link>
                         <span className="cata-button"><Link to="/rank/value">更多 {this.props.value.total}</Link> </span>
                     </div>
-
-
                     <div className="hot-each">
                         <img className="cover" src={`https://statics.zhuishushenqi.com${this.props.value.books[0].cover}`} alt="" />
                         <div className="novel-text">
@@ -69,8 +69,6 @@ class Home extends React.Component {
                         <span className="cata-title">VIP专属</span>
                         <span className="cata-button"><Link to="/rank/Vip">更多 {this.props.Vip.total}</Link> </span>
                     </div>
-
-
                     <div className="hot-each">
                         <img className="cover" src={`https://statics.zhuishushenqi.com${this.props.Vip.books[0].cover}`} alt="" />
                         <div className="novel-text">
@@ -131,7 +129,6 @@ class Home extends React.Component {
                                 else {
                                     return null;
                                 }
-
                             })
                         }
                     </div>

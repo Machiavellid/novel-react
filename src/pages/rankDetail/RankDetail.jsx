@@ -22,7 +22,6 @@ class RankDetail extends React.Component {
                         <img className="return" src={returnimg} alt="" onClick={() => { this.props.history.goBack() }} />
                         <span>{this.state.cata}</span>
                     </div>
-
                 </div>
                 <div className="novels">
                     {
