@@ -92,7 +92,6 @@ class CataNovels extends React.Component {
                 subCate:"",
                 next_start:0
             },()=>{
-                console.log(this.state.subCate)
                 this.props.initData(this.props.match.params.cata,this.props.location.state.major,this.state.subCate)
             })
         }else{
