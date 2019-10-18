@@ -5,7 +5,7 @@ module.exports = function (app) {
       proxy(
           '/hot',
           {
-            target: 'http://api.zhuishushenqi.com/ranking/5a39d435fc84c2b8ef884798',
+            target: 'http://api.zhuishushenqi.com/ranking/54d42d92321052167dfb75e3',
             changeOrigin: true,
             pathRewrite:{
                 "^/hot" : "/"
@@ -18,7 +18,7 @@ module.exports = function (app) {
     proxy(
       '/Vip',
         {
-          target: 'http://api.zhuishushenqi.com/ranking/5a683b68fc84c2b8efa68fc2',
+          target: 'http://api.zhuishushenqi.com/ranking/57eb86f0ef9e5a8f20543d7d',
           changeOrigin: true,
           pathRewrite:{
               "^/Vip" : "/"
@@ -30,7 +30,7 @@ module.exports = function (app) {
     proxy(
       '/new',
         {
-          target: 'http://api.zhuishushenqi.com/ranking/5a39d453fc84c2b8ef885812',
+          target: 'http://api.zhuishushenqi.com/ranking/54d42e72d9de23382e6877fb',
           changeOrigin: true,
           pathRewrite:{
               "^/new" : "/"

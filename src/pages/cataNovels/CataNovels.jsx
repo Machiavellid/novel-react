@@ -47,12 +47,12 @@ class CataNovels extends React.Component {
                 </div>
                 <div className="novels">
                     {
-                        this.props.value.books.map((el) => {
+                        this.props.value.books.map((el,index) => {
                             return (
-                                <Link to={`/novel/${el._id}`}>
-                                      <div className="hot-each" key={el._id}>
+                                <Link to={`/novel/${el._id}`} key={index}>
+                                    <div className="hot-each">
                                     <img className="cover" src={`https://statics.zhuishushenqi.com${el.cover}`} alt="" />
-                                    <div className="novel-text" key={el.title}>
+                                    <div className="novel-text">
                                         <span className="novel-title ellipsis ">{el.title}</span>
                                         <span className="novel-summary two-ellipsis">简介:{el.shortIntro}</span>
                                         <span className="novel-author ellipsis "><span>{el.author}</span><span className="novel-cata">{el.majorCate}{el.minorCate === "" ? null : ` ${el.minorCate}`}</span></span>

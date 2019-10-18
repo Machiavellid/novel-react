@@ -32,8 +32,8 @@ class CataDetail extends React.Component {
                             {
                                 this.props.cata.male.map((el,index) => {
                                     return (
-                                        <Link className="detail-link" to={{pathname:`/novels/male`,state:{major:el.name}}}>
-                                        <div className="cata-detail-each" key={index}>
+                                        <Link className="detail-link" to={{pathname:`/novels/male`,state:{major:el.name}}} key={index}>
+                                        <div className="cata-detail-each">
                                             <div className="detail-text">
                                                 <span className="cata-name">{el.name}</span>
                                                 <span className="cata-count">{el.bookCount}本</span>
@@ -51,9 +51,9 @@ class CataDetail extends React.Component {
                         {/* 女生栏目 */}
                         <div className="cata-detail" style={{ display: ("女生" === this.state.show) ? "flex" : "none" }} key="2">
                             {
-                                this.props.cata.female.map((el) => {
+                                this.props.cata.female.map((el,index) => {
                                     return (
-                                        <Link className="detail-link" to={{pathname:`/novels/female`,state:{major:el.name}}}>
+                                        <Link className="detail-link" to={{pathname:`/novels/female`,state:{major:el.name}}} key={index}>
                                         <div className="cata-detail-each" key={el.name}>
                                             <div className="detail-text">
                                                 <span className="cata-name">{el.name}</span>
@@ -72,10 +72,10 @@ class CataDetail extends React.Component {
                         {/* 图书栏目 */}
                         <div className="cata-detail" style={{ display: ("图书" === this.state.show) ? "flex" : "none" }} key="3">
                             {
-                                this.props.cata.picture.map((el) => {
+                                this.props.cata.picture.map((el,index) => {
                                     return (
-                                        <Link className="detail-link" to={{pathname:`/novels/picture`,state:{major:el.name}}}>
-                                        <div className="cata-detail-each" key={el.name}>
+                                        <Link className="detail-link" to={{pathname:`/novels/picture`,state:{major:el.name}}} key={index}>
+                                        <div className="cata-detail-each">
                                             <div className="detail-text">
                                                 <span className="cata-name">{el.name}</span>
                                                 <span className="cata-count">{el.bookCount}本</span>
@@ -93,10 +93,10 @@ class CataDetail extends React.Component {
                         {/* 出版栏目 */}
                         <div className="cata-detail" style={{ display: ("出版" === this.state.show) ? "flex" : "none" }} key="4">
                             {
-                                this.props.cata.press.map((el) => {
+                                this.props.cata.press.map((el,index) => {
                                     return (
-                                        <Link className="detail-link" to={{pathname:`/novels/press`,state:{major:el.name}}}>
-                                        <div className="cata-detail-each" key={el.name}>
+                                        <Link className="detail-link" to={{pathname:`/novels/press`,state:{major:el.name}}} key={index}>
+                                        <div className="cata-detail-each">
                                             <div className="detail-text">
                                                 <span className="cata-name">{el.name}</span>
                                                 <span className="cata-count">{el.bookCount}本</span>

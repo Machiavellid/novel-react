@@ -29,7 +29,7 @@ class Home extends React.Component {
 
                     </div>
                 </div>
-                {/* <div className="hot">
+                <div className="hot">
                     <div className="cata-colume">
                          <Link to="/novels"><span className="cata-title">畅销精选</span></Link>
                         <span className="cata-button"><Link to="/rank/value">更多 {this.props.value.total}</Link> </span>
@@ -134,7 +134,7 @@ class Home extends React.Component {
                     </div>
 
                 </div>
-                <div className="mid-bar"></div> */}
+                <div className="mid-bar"></div>
             </div>
         )
     }
@@ -145,7 +145,7 @@ class Home extends React.Component {
     }
 }
 const mapStateToProps = (state) => {
-    console.log(state.homeNew)
+    console.log("hot",state.homeHot)
     return {
         value: state.homeHot,
         Vip: state.homeVip,
