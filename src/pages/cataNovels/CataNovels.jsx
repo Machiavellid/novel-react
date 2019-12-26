@@ -128,7 +128,7 @@ class CataNovels extends React.Component {
                                 break
                             default:  
                         }
-                        return 
+                        return null;
                     })
                 break
                 default:
